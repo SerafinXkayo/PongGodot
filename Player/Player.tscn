@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfv4bvr75qrlp"]
+
+[ext_resource type="Texture2D" uid="uid://bd44gm0ld34qh" path="res://assets/paddle-blue.png" id="1_lx38q"]
+[ext_resource type="Script" path="res://Player/Player.gd" id="1_nhdwl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fx51w"]
+height = 104.0
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(100, 360)
+script = ExtResource("1_nhdwl")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_fx51w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("1_lx38q")
